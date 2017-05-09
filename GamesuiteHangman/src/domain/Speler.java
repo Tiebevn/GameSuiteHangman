@@ -41,13 +41,13 @@ public class Speler {
 	}
 
 	@Override
-	public boolean equals(Object o){
-        if (speler == null) throw new DomainException("");
+	public boolean equals(Object object){
+        if (object == null) return false;
 
-        if (o instanceof Speler) {
+        if (object instanceof Speler) {
 
-            Speler speler = (Speler) o;
-            return (speler.getNaam().equals(this.getNaam()) && this.getScore() == speler.getScore());
+            Speler speler = (Speler)object;
+            return (this.getNaam().equals(speler.getNaam()) && this.getScore() == speler.getScore());
 
         } return false;
 }

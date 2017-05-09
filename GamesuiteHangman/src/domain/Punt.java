@@ -27,13 +27,16 @@ public class Punt {
 	public String toString() {
 		return "("+ x+", "+ y +")";
 	}
-	public boolean equals(Punt p){
-		if(p.getX() == this.getX() && p.getY() == this.getY()){
-			return true;
+	public boolean equals(Object o){
+		
+		if (o == null) return false;
+		
+		if (o instanceof Punt) {
+			Punt p = (Punt)o;
+			
+			return (p.getX() == this.getX() && p.getY() == this.getY());
 		}
-		else{
-			return false;
-		}
+		return false;
 	}
 	
 	
