@@ -22,7 +22,7 @@ public class Launcher {
 				JOptionPane.showMessageDialog(null, "Dit punt is dubbel");
 			}
 			else{
-				JOptionPane.showMessageDialog(null, "U heeft een correct punt aangemaakt: ("+ x +", "+ y+")");
+				JOptionPane.showMessageDialog(null, "U heeft een correct punt aangemaakt: ("+ x +", "+ y+ ")", speler.getNaam(),JOptionPane.INFORMATION_MESSAGE);
 				PuntDB.voegPuntToe(new Punt(x, y));
 			}
 		}
