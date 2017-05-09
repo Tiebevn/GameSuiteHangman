@@ -23,6 +23,8 @@ public class HintWoord {
     }
 
     public boolean raad(char c) {
+
+
         boolean flag = false;
         for (HintLetter h : hintLetters) {
             h.raad(c);

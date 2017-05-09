@@ -13,9 +13,17 @@ public class HangManUi {
 
         HintWoord woord = new HintWoord("Woord");
 
-        while (!woord.isGeraden()) {
+        String text = "";
 
-            String  guess = JOptionPane.showInputDialog(null, woord.getWoord());
+        text = "Rarara, welk woord zoeken we \n" + woord.getWoord();
+
+        while (!woord.isGeraden()) {
+            String guess = JOptionPane.showInputDialog(null, text);
+
+            if (woord.raad(guess.toCharArray()[0])) {
+                text = "Super, doe zo voort! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
+            } else text = "Helaas, volgende keer beter! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
+
 
             woord.raad(guess.toCharArray()[0]);
 

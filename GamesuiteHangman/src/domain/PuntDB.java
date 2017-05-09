@@ -1,6 +1,5 @@
 package domain;
 import java.util.*;
-import domain.Punt;
 
 
 public class PuntDB {
