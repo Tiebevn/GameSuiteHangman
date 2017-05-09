@@ -30,13 +30,13 @@ public class Speler {
 		this.score += score;
 		
 	}
-	
-//	public boolean equals(Speler speler){
-//		if(this.speler.getNaam().equals(this.andereSpeler.getNaam()) && this.speler.getScore() == (this.andereSpeler.getScore())){	
-//		gelijk = true;
-//		}
-//		return gelijk;
-//	}
+	public boolean equals(boolean gelijk) {
+		if(speler == null) gelijk = false;
+		if(this.getSpeler().equals(speler)) {
+			gelijk = true;
+		}
+		return gelijk;
+	}
 	
 	public String getNaam() {
 		return naam;
