@@ -4,7 +4,7 @@ import domain.Punt;
 
 
 public class PuntDB {
-	private static ArrayList<Punt> punten = new ArrayList<Punt>();
+	public static ArrayList<Punt> punten = new ArrayList<>();
 	
 	public PuntDB(){
 		Punt punt1 = new Punt(1,1);

@@ -17,8 +17,8 @@ public class Launcher {
 		int x =Integer.parseInt(JOptionPane.showInputDialog("X coordinaat van het punt:"));
 		int y =Integer.parseInt(JOptionPane.showInputDialog("Y coordinaat van het punt:"));
 		Punt nieuwPunt = new Punt(x, y);
-		for(int i = 0; i < punten.length(); i++){
-			if(x == punten.get(i).getX() && y == punten.get(i).getY()){
+		for(int i = 0; i < PuntDB.punten.size(); i++){
+			if(x == PuntDB.punten.get(i).getX() && y == PuntDB.punten.get(i).getY()){
 				JOptionPane.showMessageDialog(null, "Dit punt is dubbel");
 			}
 			else{
