@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 /**
  * Created by tiebe on 9/05/2017.
  */
@@ -30,13 +32,18 @@ public class Speler {
 		this.score += score;
 		
 	}
-	
-//	public boolean equals(Speler speler){
-//		if(this.speler.getNaam().equals(this.andereSpeler.getNaam()) && this.speler.getScore() == (this.andereSpeler.getScore())){	
-//		gelijk = true;
-//		}
-//		return gelijk;
-//	}
+
+	@Override
+	public boolean equals(Object o){
+        if (speler == null) throw new DomainException("");
+
+        if (o instanceof Speler) {
+
+            Speler speler = (Speler) o;
+            return (speler.getNaam().equals(this.getNaam()) && this.getScore() == speler.getScore());
+
+        } return false;
+}
 	
 	public String getNaam() {
 		return naam;
