@@ -17,7 +17,7 @@ public class Cirkel extends Vorm {
     }
 
     public void setMiddelPunt(Punt middelPunt) {
-        if (middelPunt == null) throw new DomainException("Middelpunt mag niet null zijn")
+        if (middelPunt == null) throw new DomainException("Middelpunt mag niet null zijn");
 
         this.middelPunt = middelPunt;
     }
