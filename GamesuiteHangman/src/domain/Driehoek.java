@@ -39,6 +39,19 @@ public class Driehoek extends Vorm {
         this.hoekpunt3 = hoekpunt3;
     }
 
+    public Omhullende getOmhullende() {
+        int breedte = 0, hoogte = 0;
+        Punt linkerBovenhoek = new Punt(0, 0);
+
+        breedte = Math.max(this.getHoekpunt1().getX(), Math.min(this.getHoekpunt2().getX(), this.getHoekpunt3().getX()));
+        hoogte = Math.max(this.getHoekpunt1().getY(), Math.min(this.getHoekpunt2().getY(), this.getHoekpunt3().getY()));
+
+        linkerBovenhoek.setX(Math.min(this.getHoekpunt1().getX(), Math.min(this.getHoekpunt2().getX(), this.getHoekpunt3().getX())));
+        linkerBovenhoek.setX(Math.max(this.getHoekpunt1().getY(), Math.min(this.getHoekpunt2().getY(), this.getHoekpunt3().getY())));
+
+        return new Omhullende(linkerBovenhoek, breedte, hoogte);
+    }
+
     @Override
     public boolean equals(Object o) {
         if(o == null) return false;

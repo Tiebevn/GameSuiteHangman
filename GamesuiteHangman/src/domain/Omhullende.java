@@ -4,7 +4,7 @@ package domain;
 /**
  * Created by Tiebe on 8/05/2017.
  */
-public class Omhullende extends Vorm{
+public class Omhullende{
 
     private Punt linkerBovenhoek;
     private int breedte, hoogte;

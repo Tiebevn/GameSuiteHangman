@@ -7,5 +7,6 @@ public abstract class Vorm {
 
     public abstract boolean equals(Object o);
     public abstract String toString();
+    public abstract Omhullende getOmhullende();
 
 }

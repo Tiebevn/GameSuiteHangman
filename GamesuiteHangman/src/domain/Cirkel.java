@@ -33,6 +33,17 @@ public class Cirkel extends Vorm {
     }
 
     @Override
+    public Omhullende getOmhullende() {
+        int breedte = this.radius * 2, hoogte = this.radius * 2;
+        Punt linkerBovenhoek = new Punt(0, 0);
+
+        linkerBovenhoek.setX(this.getMiddelPunt().getX() - this.getRadius());
+        linkerBovenhoek.setY(this.getMiddelPunt().getY() - this.getRadius());
+
+        return new Omhullende(linkerBovenhoek, breedte, hoogte);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (o == null) return false;
 
