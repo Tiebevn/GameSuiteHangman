@@ -29,7 +29,7 @@ public class Rechthoek extends Vorm{
     }
 
     public void setBreedte(int breedte) {
-        if (breedte < 0) throw new DomainException("Breedte mag niet kleiner dan 0 zijn");
+        if (breedte <= 0) throw new DomainException("Breedte mag niet kleiner dan of gelijk aan 0 zijn");
         this.breedte = breedte;
     }
 
@@ -38,7 +38,7 @@ public class Rechthoek extends Vorm{
     }
 
     public void setHoogte(int hoogte) {
-        if (hoogte < 0) throw new DomainException("Hoogte mag niet kleiner zijn dan 0");
+        if (hoogte <= 0) throw new DomainException("Hoogte mag niet kleiner dan of gelijk aan 0 zijn");
         this.hoogte = hoogte;
     }
 
