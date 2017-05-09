@@ -66,6 +66,18 @@ public class Tekening {
         } return false;
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+
+        result = result + " Tekening met naam " + this.getNaam() + " bestaat uit " + this.getAantalVormen() + " vomren: \n";
+
+        for (Vorm v : this.vormen) {
+            result = result + v.toString();
+        }
+        return result;
+    }
+
 
 
 
