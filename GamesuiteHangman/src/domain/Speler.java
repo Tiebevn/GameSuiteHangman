@@ -50,7 +50,7 @@ public class Speler {
             return (this.getNaam().equals(speler.getNaam()) && this.getScore() == speler.getScore());
 
         } return false;
-}
+	}
 
 	
 	public String getNaam() {
@@ -75,6 +75,11 @@ public class Speler {
 
 	public void setSpeler(Speler speler) {
 		this.speler = speler;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getNaam().toString() + " heeft als score: " + this.getScore();
 	}
 	
 	
