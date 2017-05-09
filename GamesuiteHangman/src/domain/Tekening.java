@@ -22,6 +22,8 @@ public class Tekening {
 
 
     public void voegToe(Vorm vorm) {
+        if (vorm.getOmhullende().getMIN_X() < this.MIN_X || vorm.getOmhullende().getMAX_X() > this.MAX_X ||vorm.getOmhullende().getMIN_Y() < this.MIN_Y || vorm.getOmhullende().getMIN_X() > this.MAX_Y)
+
         this.vormen.add(vorm);
     }
 
