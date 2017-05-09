@@ -17,4 +17,7 @@ public class PuntDB {
 	public static void voegPuntToe(Punt punt){
 		punten.add(punt);
 	}
+	public static boolean contains(Punt punt) {
+		return punten.contains(punt);
+	}
 }
