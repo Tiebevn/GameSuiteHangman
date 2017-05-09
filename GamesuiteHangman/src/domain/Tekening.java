@@ -23,6 +23,10 @@ public class Tekening implements Drawable{
 
     public void teken(Graphics g) {
 
+        for (Vorm v : vormen) {
+            v.teken(g);
+        }
+
     }
 
     private boolean isInFigure(Vorm v) {
