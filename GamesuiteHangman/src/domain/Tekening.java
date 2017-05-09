@@ -20,11 +20,17 @@ public class Tekening {
         this.setNaam(naam);
     }
 
+    private boolean isInFigure(Vorm v) {
+        return v.getOmhullende().getMIN_X() >= this.MIN_X || v.getOmhullende().getMIN_Y() >= this.MIN_Y || v.getOmhullende().getMAX_X() <= this.MAX_X || v.getOmhullende().getMAX_Y() <= this.MAX_Y;
+    }
 
     public void voegToe(Vorm vorm) {
-        if (vorm.getOmhullende().getMIN_X() < this.MIN_X || vorm.getOmhullende().getMAX_X() > this.MAX_X ||vorm.getOmhullende().getMIN_Y() < this.MIN_Y || vorm.getOmhullende().getMIN_X() > this.MAX_Y)
+        if (isInFigure(vorm)) {
 
-        this.vormen.add(vorm);
+            this.vormen.add(vorm);
+        } else {
+            throw new DomainException("Deze figuur is niet in de vorm");
+        }
     }
 
     public int getAantalVormen() {
