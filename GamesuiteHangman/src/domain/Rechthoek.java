@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.*;
+
 /**
  * Created by tiebe on 9/05/2017.
  */
@@ -13,6 +15,10 @@ public class Rechthoek extends Vorm{
         this.setBreedte(breedte);
         this.setHoogte(hoogte);
         this.setLinkerBovenhoek(linkerBovenhoek);
+    }
+
+    public void teken(Graphics g) {
+        g.drawRect(linkerBovenhoek.getX(), linkerBovenhoek.getY(), getBreedte(), getHoogte());
     }
 
     public Punt getLinkerBovenhoek() {

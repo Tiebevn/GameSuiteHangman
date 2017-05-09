@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.*;
+
 /**
  * Created by tiebe on 9/05/2017.
  */
@@ -10,6 +12,10 @@ public class Cirkel extends Vorm {
     public Cirkel(Punt middelPunt, int radius) {
         this.setMiddelPunt(middelPunt);
         this.setRadius(radius);
+    }
+
+    public void teken(Graphics g) {
+        g.drawOval(getMiddelPunt().getX(), getMiddelPunt().getY(), getRadius(), getRadius());
     }
 
     public Punt getMiddelPunt() {

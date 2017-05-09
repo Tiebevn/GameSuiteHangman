@@ -1,11 +1,12 @@
 package domain;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
  * Created by Tiebe on 8/05/2017.
  */
-public class Tekening {
+public class Tekening implements Drawable{
 
     private String naam;
     private static final int MIN_X = 0;
@@ -18,6 +19,10 @@ public class Tekening {
         this.vormen = new ArrayList<>();
 
         this.setNaam(naam);
+    }
+
+    public void teken(Graphics g) {
+
     }
 
     private boolean isInFigure(Vorm v) {
