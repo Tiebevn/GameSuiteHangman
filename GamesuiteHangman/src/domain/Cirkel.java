@@ -7,8 +7,8 @@ public class Cirkel extends Vorm {
     private Punt middelPunt;
     private int radius;
 
-    public Cirkel(Punt punt, int radius) {
-        this.setMiddelPunt(punt);
+    public Cirkel(Punt middelPunt, int radius) {
+        this.setMiddelPunt(middelPunt);
         this.setRadius(radius);
     }
 
@@ -27,7 +27,7 @@ public class Cirkel extends Vorm {
     }
 
     public void setRadius(int radius) {
-        if (radius < 0) throw new DomainException("Radius mag niet kleiner dan 0 zijn");
+        if (radius <= 0) throw new DomainException("Radius moet groter zijn dan 0");
 
         this.radius = radius;
     }
