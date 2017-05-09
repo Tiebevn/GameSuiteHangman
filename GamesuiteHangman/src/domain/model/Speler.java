@@ -1,6 +1,6 @@
-package domain;
+package domain.model;
 
-import java.util.Objects;
+import domain.exceptions.DomainException;
 
 /**
  * Created by tiebe on 9/05/2017.

@@ -1,4 +1,6 @@
-package domain;
+package domain.model;
+
+import domain.exceptions.DomainException;
 
 import java.awt.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package domain;
+package domain.model;
 
 /**
  * Created by tiebe on 9/05/2017.

@@ -1,6 +1,6 @@
 package ui;
 
-import domain.HintWoord;
+import domain.model.HintWoord;
 
 import javax.swing.*;
 

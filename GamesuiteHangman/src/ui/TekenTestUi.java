@@ -1,7 +1,7 @@
 package ui;
 
 
-import domain.*;
+import domain.model.*;
 
 import javax.swing.*;
 import java.awt.*;

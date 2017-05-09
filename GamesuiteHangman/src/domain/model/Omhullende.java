@@ -1,5 +1,7 @@
-package domain;
+package domain.model;
 
+
+import domain.exceptions.DomainException;
 
 /**
  * Created by Tiebe on 8/05/2017.
