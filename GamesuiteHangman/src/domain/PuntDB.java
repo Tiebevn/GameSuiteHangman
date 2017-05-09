@@ -4,7 +4,7 @@ import domain.Punt;
 
 
 public class PuntDB {
-	private ArrayList<Punt> punten = new ArrayList<Punt>();
+	private static ArrayList<Punt> punten = new ArrayList<Punt>();
 	
 	public PuntDB(){
 		Punt punt1 = new Punt(1,1);
@@ -14,22 +14,7 @@ public class PuntDB {
 		Punt punt3 = new Punt(1,3);
 		punten.add(punt3);
 	}
-	public void setPunten(ArrayList<Punt> punten) {
-		this.punten = punten;
-	}
-	public void voegPuntToe(Punt punt){
+	public static void voegPuntToe(Punt punt){
 		punten.add(punt);
 	}
-
-	public PuntDB(ArrayList<Punt> punten) {
-		super();
-		this.punten = punten;
-	}
-
-	public ArrayList<Punt> getPunten() {
-		return punten;
-	}
-
-	
-	
 }
