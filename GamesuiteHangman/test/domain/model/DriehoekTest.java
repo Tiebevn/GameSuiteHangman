@@ -1,7 +1,9 @@
-package domain;
+package domain.model;
 
 import static org.junit.Assert.*;
 
+
+import domain.exceptions.*;
 import org.junit.Test;
 
 public class DriehoekTest {

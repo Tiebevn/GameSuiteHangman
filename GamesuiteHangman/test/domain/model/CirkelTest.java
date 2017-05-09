@@ -1,7 +1,8 @@
-package domain;
+package domain.model;
 
 import static org.junit.Assert.*;
 
+import domain.exceptions.*;
 import org.junit.Before;
 import org.junit.Test;
 
