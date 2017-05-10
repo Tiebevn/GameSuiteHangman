@@ -6,14 +6,13 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import domain.model.Cirkel;
-import domain.model.Driehoek;
-import domain.model.LijnStuk;
-import domain.model.Punt;
-import domain.model.Rechthoek;
-import domain.model.Tekening;
+import domain.Cirkel;
+import domain.Driehoek;
+import domain.LijnStuk;
+import domain.Punt;
+import domain.Rechthoek;
+import domain.Tekening;
 
-import domain.exceptions.*;
 public class TekenVenster extends Canvas {
 
     private static final long serialVersionUID = 1L;
