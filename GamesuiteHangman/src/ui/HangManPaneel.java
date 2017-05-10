@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 import domain.model.HangMan;
 
-public class HangmanPaneel extends JPanel {
+public class HangManPaneel extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class HangmanPaneel extends JPanel {
     private TekenVenster tekenVenster;
     private HangMan spel;
 
-    public HangmanPaneel(HangMan spel){
+    public HangManPaneel(HangMan spel){
         super();
         setSpel(spel);
         init();
