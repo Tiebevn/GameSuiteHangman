@@ -8,9 +8,11 @@ import java.util.ArrayList;
 public class HintWoord {
 
     private ArrayList<HintLetter> hintLetters;
+    private String opplossing;
 
     public HintWoord(String woord) {
         hintLetters = new ArrayList<>();
+        this.opplossing = woord;
         this.create(woord);
     }
 
@@ -51,6 +53,16 @@ public class HintWoord {
         }
 
         return result;
+    }
+
+    public String getOplossing() {
+        return this.opplossing;
+    }
+
+    public void solved() {
+        for (HintLetter hintLetter : hintLetters) {
+            hintLetter.setGeraden();
+        }
     }
 
 

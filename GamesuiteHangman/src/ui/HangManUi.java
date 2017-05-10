@@ -1,6 +1,7 @@
 package ui;
 
 import domain.model.HintWoord;
+import domain.db.WoordenLijst;
 
 import javax.swing.*;
 
@@ -11,7 +12,10 @@ public class HangManUi {
 
     public static void main(String[] args) {
 
-        HintWoord woord = new HintWoord("Woord");
+        WoordenLijst.importWords();
+
+        HintWoord woord = new HintWoord(WoordenLijst.getRandom());
+
 
         String text = "";
 
@@ -20,14 +24,20 @@ public class HangManUi {
         while (!woord.isGeraden()) {
             String guess = JOptionPane.showInputDialog(null, text);
 
-            if (woord.raad(guess.toCharArray()[0])) {
-                text = "Super, doe zo voort! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
-            } else text = "Helaas, volgende keer beter! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
+            if (guess.length() == 1) {
+                if (woord.raad(guess.toCharArray()[0])) {
+                    text = "Super, doe zo voort! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
+                } else text = "Helaas, volgende keer beter! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
 
+            } else {
+                if (guess.equals(woord.getOplossing())) woord.solved();
+            }
 
             woord.raad(guess.toCharArray()[0]);
 
         }
+
+        JOptionPane.showMessageDialog(null, "Proficiat, het woord was " + woord.getOplossing());
 
 
     }

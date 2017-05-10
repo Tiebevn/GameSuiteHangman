@@ -29,4 +29,7 @@ public class HintLetter {
         if (isGeraden()) return this.letter;
         return '_';
     }
+    public void setGeraden(){
+        this.geraden = true;
+    }
 }
