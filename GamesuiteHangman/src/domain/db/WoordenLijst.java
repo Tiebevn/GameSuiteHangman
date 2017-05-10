@@ -36,4 +36,8 @@ public class WoordenLijst {
         return lijst.get((int) (Math.random() * lijst.size()));
     }
 
+    public int getAantalWoorden() {
+        return this.lijst.size();
+    }
+
 }

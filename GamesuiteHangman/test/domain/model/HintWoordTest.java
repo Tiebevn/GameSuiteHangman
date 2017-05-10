@@ -1,9 +1,11 @@
-package domain;
+package domain.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import domain.exceptions.DomainException;
+import domain.model.HintWoord;
 import org.junit.Test;
 
 

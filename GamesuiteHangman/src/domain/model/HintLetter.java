@@ -32,4 +32,8 @@ public class HintLetter {
     public void setGeraden(){
         this.geraden = true;
     }
+
+    public char toChar() {
+        return this.letter;
+    }
 }

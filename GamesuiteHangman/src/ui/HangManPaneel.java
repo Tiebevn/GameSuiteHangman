@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import domain.HangMan;
+import domain.model.HangMan;
 
 public class HangmanPaneel extends JPanel {
 
