@@ -16,6 +16,14 @@ public class HangMan {
         this.setLijst(lijst);
     }
 
+    public Tekening getTekening() {
+        return new Tekening("Test");
+    }
+
+    public String getHint() {
+        return "";
+    }
+
     public boolean raad(char c) {
         return false;
     }

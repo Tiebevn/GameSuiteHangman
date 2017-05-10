@@ -22,6 +22,10 @@ public class WoordenLijst {
         }
     }
 
+    public int getAantalWoorden() {
+        return 1;
+    }
+
     public static List<String> get() {
         return lijst;
     }

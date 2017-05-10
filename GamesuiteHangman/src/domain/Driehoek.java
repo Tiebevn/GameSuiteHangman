@@ -12,7 +12,7 @@ public class Driehoek extends Vorm {
         this.setHoekPunt3(hoekpunt3);
     }
 
-    public Punt getHoekPunt1() {
+    public Punt getHoekpunt1() {
         return hoekpunt1;
     }
 
@@ -21,7 +21,7 @@ public class Driehoek extends Vorm {
         this.hoekpunt1 = hoekpunt1;
     }
 
-    public Punt getHoekPunt2() {
+    public Punt getHoekpunt2() {
         return hoekpunt2;
     }
 
@@ -30,7 +30,7 @@ public class Driehoek extends Vorm {
         this.hoekpunt2 = hoekpunt2;
     }
 
-    public Punt getHoekPunt3() {
+    public Punt getHoekpunt3() {
         return hoekpunt3;
     }
 
@@ -43,11 +43,11 @@ public class Driehoek extends Vorm {
         int breedte = 0, hoogte = 0;
         Punt linkerBovenhoek = new Punt(0, 0);
 
-        breedte = Math.max(this.getHoekPunt1().getX(), Math.min(this.getHoekPunt2().getX(), this.getHoekPunt3().getX()));
-        hoogte = Math.max(this.getHoekPunt1().getY(), Math.min(this.getHoekPunt2().getY(), this.getHoekPunt3().getY()));
+        breedte = Math.max(this.getHoekpunt1().getX(), Math.min(this.getHoekpunt2().getX(), this.getHoekpunt3().getX()));
+        hoogte = Math.max(this.getHoekpunt1().getY(), Math.min(this.getHoekpunt2().getY(), this.getHoekpunt3().getY()));
 
-        linkerBovenhoek.setX(Math.min(this.getHoekPunt1().getX(), Math.min(this.getHoekPunt2().getX(), this.getHoekPunt3().getX())));
-        linkerBovenhoek.setX(Math.max(this.getHoekPunt1().getY(), Math.min(this.getHoekPunt2().getY(), this.getHoekPunt3().getY())));
+        linkerBovenhoek.setX(Math.min(this.getHoekpunt1().getX(), Math.min(this.getHoekpunt2().getX(), this.getHoekpunt3().getX())));
+        linkerBovenhoek.setX(Math.max(this.getHoekpunt1().getY(), Math.min(this.getHoekpunt2().getY(), this.getHoekpunt3().getY())));
 
         return new Omhullende(linkerBovenhoek, breedte, hoogte);
     }
@@ -57,13 +57,13 @@ public class Driehoek extends Vorm {
         if(o == null) return false;
         if(o instanceof Driehoek){
             Driehoek driehoek = (Driehoek)o;
-            return (this.getHoekPunt1().equals(driehoek.getHoekPunt1()) && this.getHoekPunt2().equals(driehoek.getHoekPunt2()) && this.getHoekPunt3().equals(driehoek.getHoekPunt3()));
+            return (this.getHoekpunt1().equals(driehoek.getHoekpunt1()) && this.getHoekpunt2().equals(driehoek.getHoekpunt2()) && this.getHoekpunt3().equals(driehoek.getHoekpunt3()));
         }
         return false;
     }
 
     @Override
     public String toString() {
-        return "Driehoek: hoekpunt1: " + this.getHoekPunt1().toString() + " - hoekpunt2: " + this.getHoekPunt2().toString() + " - hoekpunt3: " + this.getHoekPunt3().toString();
+        return "Driehoek: hoekpunt1: " + this.getHoekpunt1().toString() + " - hoekpunt2: " + this.getHoekpunt2().toString() + " - hoekpunt3: " + this.getHoekpunt3().toString();
     }
 }

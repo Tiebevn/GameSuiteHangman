@@ -20,6 +20,10 @@ public class Tekening {
         this.setNaam(naam);
     }
 
+    public int getAantalOnzichtbaar() {
+        return 1;
+    }
+
 
     public void voegToe(Vorm vorm) {
         if (vorm.getOmhullende().getMinX() < this.MIN_X || vorm.getOmhullende().getMaxX() > this.MAX_X ||vorm.getOmhullende().getMinY() < this.MIN_Y || vorm.getOmhullende().getMinX() > this.MAX_Y)
