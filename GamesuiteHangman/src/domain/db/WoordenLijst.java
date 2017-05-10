@@ -10,11 +10,11 @@ import java.util.List;
  */
 public class WoordenLijst {
 
-    private static List<String> lijst;
+    private  List<String> lijst;
 
 
 
-    public static void importWords() {
+    public  void importWords() {
         try {
             lijst =WoordenLezer.lees();
         } catch (IOException e) {
@@ -22,16 +22,16 @@ public class WoordenLijst {
         }
     }
 
-    public static List<String> get() {
+    public  List<String> get() {
         return lijst;
     }
 
-    public static void voegToe(String woord) {
+    public  void voegToe(String woord) {
         if (woord == null || woord.isEmpty()) throw new DomainException("");
         lijst.add(woord);
     }
 
-    public static String getRandom() {
+    public  String getRandom() {
 
         return lijst.get((int) (Math.random() * lijst.size()));
     }
