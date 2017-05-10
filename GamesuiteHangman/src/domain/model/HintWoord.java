@@ -1,6 +1,9 @@
 package domain.model;
 
+import domain.exceptions.DomainException;
+
 import java.util.ArrayList;
+import java.util.zip.DataFormatException;
 
 /**
  * Created by Tiebe on 9/05/2017.

@@ -24,6 +24,11 @@ public class HangManUi {
         while (!woord.isGeraden()) {
             String guess = JOptionPane.showInputDialog(null, text);
 
+
+            if (guess.contains("123456789")) {
+                // ERROR
+            }
+
             if (guess.length() == 1) {
                 if (woord.raad(guess.toCharArray()[0])) {
                     text = "Super, doe zo voort! \n" + "Rarara, welk woord zoeken we \n" + woord.getWoord();
