@@ -2,7 +2,7 @@ package ui;
 
 import java.awt.BorderLayout;
 
-import domain.model.HangMan;
+import domain.HangMan;
 
 public class HangManHoofdScherm extends GameHoofdScherm {
 
