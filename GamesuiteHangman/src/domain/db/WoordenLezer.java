@@ -19,7 +19,7 @@ public  class WoordenLezer {
     public static List<String> lees() throws IOException {
 
 
-         return Files.readAllLines(Paths.get("c:\\Users\\Tiebe\\Documents\\wordlist.txt"));
+         return Files.readAllLines(Paths.get("wordlist.txt"));
 
 
 
