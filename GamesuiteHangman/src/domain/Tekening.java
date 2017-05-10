@@ -20,15 +20,21 @@ public class Tekening {
         this.setNaam(naam);
     }
 
+
+
     public int getAantalOnzichtbaar() {
-        return 1;
+        return vormen.size();
     }
 
 
-    public void voegToe(Vorm vorm) {
-        if (vorm.getOmhullende().getMinX() < this.MIN_X || vorm.getOmhullende().getMaxX() > this.MAX_X ||vorm.getOmhullende().getMinY() < this.MIN_Y || vorm.getOmhullende().getMinX() > this.MAX_Y)
+    private boolean isInBounds(Vorm vorm) {
+        return vorm.getOmhullende().getMinX() < this.MIN_X || vorm.getOmhullende().getMinY() < this.MIN_Y || vorm.getOmhullende().getMaxX() > this.MAX_X ||vorm.getOmhullende().getMaxY() > this.MAX_Y;
+    }
 
-        this.vormen.add(vorm);
+    public void voegToe(Vorm vorm) {
+
+        if (isInBounds(vorm)) this.vormen.add(vorm);
+
     }
 
     public int getAantalVormen() {

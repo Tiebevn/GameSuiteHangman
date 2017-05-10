@@ -49,6 +49,7 @@ public class HangMan {
     }
 
     public void setSpeler(Speler speler) {
+        if (speler == null) throw new DomainException("");
         this.speler = speler;
     }
 

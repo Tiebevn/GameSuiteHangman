@@ -15,6 +15,7 @@ public class HintWoord {
     }
 
     private void create(String woord) {
+        if (woord ==null |woord.isEmpty()) throw new DomainException("");
         char[] chars = woord.toCharArray();
 
         for (char c : chars) {
@@ -49,6 +50,10 @@ public class HintWoord {
         }
 
         return result;
+    }
+
+    public String toString() {
+        return this.getWoord();
     }
 
 

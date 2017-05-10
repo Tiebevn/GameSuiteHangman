@@ -26,16 +26,16 @@ public class WoordenLijst {
         return 1;
     }
 
-    public static List<String> get() {
+    public  List<String> get() {
         return lijst;
     }
 
-    public static void voegToe(String woord) {
+    public  void voegToe(String woord) {
         if (woord == null || woord.isEmpty()) throw new DomainException("");
         lijst.add(woord);
     }
 
-    public static String getRandom() {
+    public  String getRandom() {
 
         return lijst.get((int) (Math.random() * lijst.size()));
     }
