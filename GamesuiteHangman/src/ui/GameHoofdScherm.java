@@ -7,7 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import domain.Tekening;
+import domain.model.Tekening;
 
 public class GameHoofdScherm extends JFrame{
 
