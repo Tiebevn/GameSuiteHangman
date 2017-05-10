@@ -11,10 +11,10 @@ import java.util.ArrayList;
 public class Tekening implements Drawable{
 
     private String naam;
-    private static final int MIN_X = 0;
-    private static final int MIN_Y = 0;
-    private static final int MAX_X = 399;
-    private static final int MAX_Y = 399;
+    private static final int MinX = 0;
+    private static final int MinY = 0;
+    private static final int MaxX = 399;
+    private static final int MaxY = 399;
     private ArrayList<Vorm> vormen;
 
     public Tekening(String naam) {
@@ -32,7 +32,7 @@ public class Tekening implements Drawable{
     }
 
     private boolean isInFigure(Vorm v) {
-        return v.getOmhullende().getMIN_X() >= this.MIN_X || v.getOmhullende().getMIN_Y() >= this.MIN_Y || v.getOmhullende().getMAX_X() <= this.MAX_X || v.getOmhullende().getMAX_Y() <= this.MAX_Y;
+        return v.getOmhullende().getMinX() >= this.MinX || v.getOmhullende().getMinY() >= this.MinY || v.getOmhullende().getMaxX() <= this.MaxX || v.getOmhullende().getMaxY() <= this.MaxY;
     }
 
     public void voegToe(Vorm vorm) {
