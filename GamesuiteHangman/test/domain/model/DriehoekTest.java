@@ -21,9 +21,9 @@ public class DriehoekTest {
 	public void Driehoek_moet_DrieHoek_aanmaken_met_gegeven_hoekpunten() {
 		Driehoek drieHoek = new Driehoek(punt1, punt2, punt3);
 
-		assertEquals(punt1, drieHoek.getHoekpunt1());
-		assertEquals(punt2, drieHoek.getHoekpunt2());
-		assertEquals(punt3, drieHoek.getHoekpunt3());
+		assertEquals(punt1, drieHoek.getHoekPunt1());
+		assertEquals(punt2, drieHoek.getHoekPunt2());
+		assertEquals(punt3, drieHoek.getHoekPunt3());
 	}
 	
 	@Test (expected = DomainException.class)
