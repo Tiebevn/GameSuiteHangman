@@ -25,10 +25,6 @@ public class HangMan {
         return galg;
     }
 
-    private void setGalg(TekeningHangMan galg) {
-        this.galg = galg;
-    }
-
     private void pickWord() {
         woord = new HintWoord(lijst.getRandom());
     }

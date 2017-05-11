@@ -48,7 +48,7 @@ public class Tekening {
 
 
     private boolean isInBounds(Vorm v) {
-        return v.getOmhullende().getMIN_X() >= this.MIN_X || v.getOmhullende().getMIN_Y() >= this.MIN_Y || v.getOmhullende().getMAX_X() <= this.MAX_X || v.getOmhullende().getMAX_Y() <= this.MAX_Y;
+        return v.getOmhullende().getMIN_X() >= Tekening.MIN_X || v.getOmhullende().getMIN_Y() >= Tekening.MIN_Y || v.getOmhullende().getMAX_X() <= Tekening.MAX_X || v.getOmhullende().getMAX_Y() <= Tekening.MAX_Y;
     }
 
     public void voegToe(Vorm vorm) {

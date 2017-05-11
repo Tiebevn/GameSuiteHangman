@@ -1,7 +1,6 @@
 package ui;
 
 import domain.HangMan;
-import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
