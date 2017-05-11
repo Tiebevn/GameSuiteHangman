@@ -45,7 +45,7 @@ public class HangMan {
                 return false;
             }
 
-            }
+        }
         if (this.woord.isGeraden()) this.gewonnen = true;
 
         return true;

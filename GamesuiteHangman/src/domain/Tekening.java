@@ -7,11 +7,11 @@ import java.util.ArrayList;
  */
 public class Tekening {
 
-    private String naam;
     private static final int MIN_X = 0;
     private static final int MIN_Y = 0;
     private static final int MAX_X = 399;
     private static final int MAX_Y = 399;
+    private String naam;
     private ArrayList<Vorm> vormen;
 
     public Tekening(String naam) {
@@ -78,7 +78,7 @@ public class Tekening {
         if (o == null) return false;
 
         if (o instanceof Tekening) {
-            Tekening tekening = (Tekening)o;
+            Tekening tekening = (Tekening) o;
 
             if (tekening.getAantalVormen() != this.getAantalVormen()) return false;
 
@@ -88,7 +88,8 @@ public class Tekening {
 
             return true;
 
-        } return false;
+        }
+        return false;
     }
 
     @Override
@@ -102,8 +103,6 @@ public class Tekening {
         }
         return result;
     }
-
-
 
 
 }

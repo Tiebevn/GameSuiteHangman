@@ -45,7 +45,7 @@ public class TekeningHangMan {
             }
 
         }
-            return false;
+        return false;
 
     }
 

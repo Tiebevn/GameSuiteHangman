@@ -4,7 +4,7 @@ package domain;
 /**
  * Created by Tiebe on 8/05/2017.
  */
-public class Omhullende{
+public class Omhullende {
 
     private Punt linkerBovenhoek;
     private int breedte, hoogte;
@@ -20,17 +20,18 @@ public class Omhullende{
     public int getMIN_X() {
         return this.getLinkerBovenhoek().getX();
     }
+
     public int getMIN_Y() {
-        return this.getLinkerBovenhoek().getY() ;
+        return this.getLinkerBovenhoek().getY();
     }
+
     public int getMAX_X() {
         return this.getLinkerBovenhoek().getX() + this.getBreedte();
     }
+
     public int getMAX_Y() {
         return this.getLinkerBovenhoek().getY() + this.getHoogte();
     }
-
-
 
 
     public Punt getLinkerBovenhoek() {
@@ -57,7 +58,7 @@ public class Omhullende{
     }
 
     public void setHoogte(int hoogte) {
-        if(hoogte < 0) throw new DomainException("");
+        if (hoogte < 0) throw new DomainException("");
         this.hoogte = hoogte;
     }
 
@@ -65,8 +66,9 @@ public class Omhullende{
     public boolean equals(Object o) {
         if (o == null) return false;
         if (o instanceof Omhullende) {
-            Omhullende r = (Omhullende)o;
-            if (r.getBreedte() == this.getBreedte() && r.getHoogte() == this.getHoogte() && r.getLinkerBovenhoek().equals(this.getLinkerBovenhoek())) return true;
+            Omhullende r = (Omhullende) o;
+            if (r.getBreedte() == this.getBreedte() && r.getHoogte() == this.getHoogte() && r.getLinkerBovenhoek().equals(this.getLinkerBovenhoek()))
+                return true;
             return false;
         }
         return false;

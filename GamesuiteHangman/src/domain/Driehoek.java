@@ -17,7 +17,7 @@ public class Driehoek extends Vorm {
     }
 
     public void setHoekPunt1(Punt hoekpunt1) {
-        if(hoekpunt1 == null) throw new DomainException("hoekpunt mag niet null zijn");
+        if (hoekpunt1 == null) throw new DomainException("hoekpunt mag niet null zijn");
         this.hoekpunt1 = hoekpunt1;
     }
 
@@ -26,7 +26,7 @@ public class Driehoek extends Vorm {
     }
 
     public void setHoekPunt2(Punt hoekpunt2) {
-        if(hoekpunt2 == null) throw new DomainException("hoekpunt mag niet null zijn");
+        if (hoekpunt2 == null) throw new DomainException("hoekpunt mag niet null zijn");
         this.hoekpunt2 = hoekpunt2;
     }
 
@@ -35,7 +35,7 @@ public class Driehoek extends Vorm {
     }
 
     public void setHoekPunt3(Punt hoekpunt3) {
-        if(hoekpunt3 == null) throw new DomainException("hoekpunt mag niet null zijn");
+        if (hoekpunt3 == null) throw new DomainException("hoekpunt mag niet null zijn");
         this.hoekpunt3 = hoekpunt3;
     }
 
@@ -54,9 +54,9 @@ public class Driehoek extends Vorm {
 
     @Override
     public boolean equals(Object o) {
-        if(o == null) return false;
-        if(o instanceof Driehoek){
-            Driehoek driehoek = (Driehoek)o;
+        if (o == null) return false;
+        if (o instanceof Driehoek) {
+            Driehoek driehoek = (Driehoek) o;
             return (this.getHoekpunt1().equals(driehoek.getHoekpunt1()) && this.getHoekpunt2().equals(driehoek.getHoekpunt2()) && this.getHoekpunt3().equals(driehoek.getHoekpunt3()));
         }
         return false;

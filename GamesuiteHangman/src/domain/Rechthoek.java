@@ -3,7 +3,7 @@ package domain;
 /**
  * Created by tiebe on 9/05/2017.
  */
-public class Rechthoek extends Vorm{
+public class Rechthoek extends Vorm {
 
 
     private Punt linkerBovenhoek;
@@ -48,9 +48,9 @@ public class Rechthoek extends Vorm{
         if (o == null) return false;
         if (o instanceof Rechthoek) {
 
-            Rechthoek rechthoek = (Rechthoek)o;
+            Rechthoek rechthoek = (Rechthoek) o;
 
-            return  (rechthoek.getLinkerBovenhoek().equals(this.getLinkerBovenhoek()) && rechthoek.getBreedte() == this.getBreedte() && rechthoek.getHoogte() == this.getHoogte());
+            return (rechthoek.getLinkerBovenhoek().equals(this.getLinkerBovenhoek()) && rechthoek.getBreedte() == this.getBreedte() && rechthoek.getHoogte() == this.getHoogte());
 
         }
 
@@ -63,6 +63,6 @@ public class Rechthoek extends Vorm{
 
     @Override
     public String toString() {
-    return "Rechthoek: positie: " + this.getLinkerBovenhoek().toString() + " - breedte: " + this.getBreedte() + " - hoogte: " + this.getHoogte();
+        return "Rechthoek: positie: " + this.getLinkerBovenhoek().toString() + " - breedte: " + this.getBreedte() + " - hoogte: " + this.getHoogte();
     }
 }

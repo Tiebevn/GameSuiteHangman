@@ -21,7 +21,7 @@ public class HintWoord {
 
         this.hint = new ArrayList<>();
 
-        for (char c: woord.toCharArray()) {
+        for (char c : woord.toCharArray()) {
             this.hint.add(new HintLetter(c));
         }
     }

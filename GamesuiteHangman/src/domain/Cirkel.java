@@ -49,9 +49,9 @@ public class Cirkel extends Vorm {
 
         if (o instanceof Cirkel) {
 
-            Cirkel cirkel = (Cirkel)o;
+            Cirkel cirkel = (Cirkel) o;
 
-            return  (cirkel.getMiddelPunt().equals(this.getMiddelPunt()) && cirkel.getRadius() == this.getRadius());
+            return (cirkel.getMiddelPunt().equals(this.getMiddelPunt()) && cirkel.getRadius() == this.getRadius());
         }
         return false;
     }

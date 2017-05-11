@@ -1,18 +1,8 @@
 package ui;
 
-import java.awt.BasicStroke;
-import java.awt.Canvas;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import domain.*;
 
-import domain.Cirkel;
-import domain.Driehoek;
-import domain.LijnStuk;
-import domain.Punt;
-import domain.Rechthoek;
-import domain.Tekening;
-import domain.UiException;
+import java.awt.*;
 
 public class TekenVenster extends Canvas {
 
@@ -57,10 +47,10 @@ public class TekenVenster extends Canvas {
                 .getStartPunt().getY(), boomstam.getEindPunt().getX(), boomstam
                 .getEindPunt().getY());
 
-        int[] xPoints = { dak.getHoekpunt1().getX(), dak.getHoekpunt2().getX(),
-                dak.getHoekpunt3().getX() };
-        int[] yPoints = { dak.getHoekpunt1().getY(), dak.getHoekpunt2().getY(),
-                dak.getHoekpunt3().getY() };
+        int[] xPoints = {dak.getHoekpunt1().getX(), dak.getHoekpunt2().getX(),
+                dak.getHoekpunt3().getX()};
+        int[] yPoints = {dak.getHoekpunt1().getY(), dak.getHoekpunt2().getY(),
+                dak.getHoekpunt3().getY()};
         graphics.drawPolygon(xPoints, yPoints, 3);
     }
 }
