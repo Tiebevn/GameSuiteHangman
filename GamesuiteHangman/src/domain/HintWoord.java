@@ -27,12 +27,12 @@ public class HintWoord {
     }
 
     public boolean raad(char c) {
-
+        boolean flag = false;
         for (HintLetter h : hint) {
-            if (h.raad(c)) return true;
+            if (h.raad(c)) flag = true;
         }
 
-        return false;
+        return flag;
 
     }
 

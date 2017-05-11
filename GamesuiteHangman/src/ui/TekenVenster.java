@@ -27,6 +27,13 @@ public class TekenVenster extends Canvas {
         repaint();
     }
 
+    public void reset(Tekening tekening) {
+        setTekening(tekening);
+        teken();
+    }
+
+
+
     @Override
     public void paint(Graphics graphics) {
         tekening.teken(graphics);

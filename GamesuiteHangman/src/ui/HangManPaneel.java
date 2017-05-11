@@ -37,7 +37,8 @@ public class HangManPaneel extends JPanel {
 
     private void reset() {
         woord.setText(getSpel().getHint());
-        getTekenVenster().teken();
+
+        getTekenVenster().reset(spel.getTekening());
     }
 
     private HangMan getSpel() {
@@ -82,7 +83,10 @@ public class HangManPaneel extends JPanel {
                 if (spel.isGewonnen() ||spel.isGameOver()) {
                     int dialogResult = JOptionPane.showConfirmDialog(null, "Wil je nog eens spelen", "Kies", JOptionPane.YES_NO_OPTION);
                     if (dialogResult == 0) {
-                        
+                        spel = new HangMan(spel.getSpeler(), spel.getLijst());
+
+                        reset();
+
                     }
                     if (dialogResult == 1) System.exit((0));
                 }
