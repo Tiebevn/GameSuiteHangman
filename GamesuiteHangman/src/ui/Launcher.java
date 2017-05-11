@@ -18,8 +18,6 @@ public class Launcher {
         maakKeuze(speler);
 
 
-
-
     }
 
     private static void maakKeuze(Speler s) {
@@ -45,7 +43,7 @@ public class Launcher {
             HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
             view.setVisible(true);
 
-        } else if (o.equals("Pictionary")){
+        } else if (o.equals("Pictionary")) {
             JOptionPane.showMessageDialog(null, "Pictionary is nog niet geïmplementeerd");
             maakKeuze(s);
         } else {

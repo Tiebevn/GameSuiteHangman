@@ -3,8 +3,7 @@ package domain;
 /**
  * Created by tiebe on 11/05/2017.
  */
-public class TekeningHangMan extends Tekening{
-
+public class TekeningHangMan extends Tekening {
 
 
     public TekeningHangMan() {

@@ -79,14 +79,14 @@ public class HangManPaneel extends JPanel {
                 //TODO
                 //toon boodschap als gewonnen of verloren en vraag of speler opnieuw wilt spelen
 
-                if (spel.isGewonnen() ||spel.isGameOver()) {
+                if (spel.isGewonnen() || spel.isGameOver()) {
 
                     int dialogResult = 0;
 
                     if (spel.isGewonnen()) {
-                         dialogResult = JOptionPane.showConfirmDialog(null, "Proficiat! Je hebt gewonnen!\n \n Wil je nog eens spelen?", "Kies", JOptionPane.YES_NO_OPTION);
+                        dialogResult = JOptionPane.showConfirmDialog(null, "Proficiat! Je hebt gewonnen!\n \n Wil je nog eens spelen?", "Kies", JOptionPane.YES_NO_OPTION);
                     } else {
-                         dialogResult = JOptionPane.showConfirmDialog(null, "Jammer, maar helaas\n Het juiste woord was '" + spel.getOplossing() +"'\n \nWil je nog eens spelen?", "Kies", JOptionPane.YES_NO_OPTION);
+                        dialogResult = JOptionPane.showConfirmDialog(null, "Jammer, maar helaas\n Het juiste woord was '" + spel.getOplossing() + "'\n \nWil je nog eens spelen?", "Kies", JOptionPane.YES_NO_OPTION);
                     }
 
                     if (dialogResult == 0) {
@@ -97,8 +97,6 @@ public class HangManPaneel extends JPanel {
                     }
                     if (dialogResult == 1) System.exit((0));
                 }
-
-
 
 
                 //als de speler opnieuw wilt spelen: herzet het spel en het paneel

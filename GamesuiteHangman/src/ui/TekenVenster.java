@@ -1,7 +1,6 @@
 package ui;
 
 import domain.Tekening;
-
 import domain.UiException;
 
 import java.awt.*;
@@ -31,7 +30,6 @@ public class TekenVenster extends Canvas {
         setTekening(tekening);
         teken();
     }
-
 
 
     @Override
