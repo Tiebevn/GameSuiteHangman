@@ -17,6 +17,8 @@ public class Launcher {
         JOptionPane.showMessageDialog(null, speler.getNaam() + " zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
 
 
+        String[] keuzes = {"Hangman", "Pictionary"};
+
         WoordenLijst lijst = new WoordenLijst();
         lijst.importWords();
 

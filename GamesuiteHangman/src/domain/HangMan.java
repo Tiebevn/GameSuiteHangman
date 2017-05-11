@@ -21,6 +21,10 @@ public class HangMan {
 
     }
 
+    public String getOplossing() {
+        return this.woord.getWoord();
+    }
+
     public TekeningHangMan getGalg() {
         return galg;
     }
