@@ -1,9 +1,10 @@
 package ui;
 
-import domain.*;
+import domain.HangMan;
+import domain.Speler;
+import domain.WoordenLijst;
 
 import javax.swing.*;
-import java.util.List;
 
 
 public class Launcher {
@@ -20,15 +21,12 @@ public class Launcher {
         lijst.importWords();
 
 
-
         HangMan hangMan = new HangMan(speler, lijst);
 
         HangManPaneel panel = new HangManPaneel(hangMan);
 
         HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
         view.setVisible(true);
-
-
 
 
     }

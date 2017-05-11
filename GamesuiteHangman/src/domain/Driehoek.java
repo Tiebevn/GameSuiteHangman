@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.*;
+
 /**
  * Created by tiebe on 9/05/2017.
  */
@@ -10,6 +12,14 @@ public class Driehoek extends Vorm {
         this.setHoekPunt1(hoekpunt1);
         this.setHoekPunt2(hoekpunt2);
         this.setHoekPunt3(hoekpunt3);
+    }
+
+    public void teken(Graphics g) {
+        if (this.zichtbaar) {
+            g.drawLine(hoekpunt1.getX(), hoekpunt1.getY(), hoekpunt2.getX(), hoekpunt2.getY());
+            g.drawLine(hoekpunt1.getX(), hoekpunt1.getY(), hoekpunt3.getX(), hoekpunt3.getY());
+            g.drawLine(hoekpunt3.getX(), hoekpunt3.getY(), hoekpunt2.getX(), hoekpunt2.getY());
+        }
     }
 
     public Punt getHoekpunt1() {

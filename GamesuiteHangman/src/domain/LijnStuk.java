@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.*;
+
 /**
  * Created by tiebe on 9/05/2017.
  */
@@ -10,6 +12,11 @@ public class LijnStuk extends Vorm {
     public LijnStuk(Punt startPunt, Punt eindPunt) {
         this.setEindPunt(eindPunt);
         this.setStartPunt(startPunt);
+    }
+
+    public void teken(Graphics g) {
+        if (this.zichtbaar)
+            g.drawLine(this.startPunt.getX(), this.startPunt.getY(), this.eindPunt.getX(), this.eindPunt.getY());
     }
 
     public Omhullende getOmhullende() {
