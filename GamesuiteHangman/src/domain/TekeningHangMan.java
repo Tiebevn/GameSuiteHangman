@@ -17,7 +17,7 @@ public class TekeningHangMan extends Tekening{
         this.voegToe(new LijnStuk(new Punt(160, 350), new Punt(160, 50)));// altijd zichtbaar
         this.voegToe(new LijnStuk(new Punt(160, 50), new Punt(280, 50)));// altijd zichtbaar
         this.voegToe(new LijnStuk(new Punt(280, 50), new Punt(280, 100)));// altijd zichtbaar
-        this.voegToe(new Cirkel(new Punt(280, 125), 25));// zichtbaar na 1 fout
+        this.voegToe(new Cirkel(new Punt(256, 101), 49));// zichtbaar na 1 fout
         this.voegToe(new Cirkel(new Punt(270, 118), 2));// zichtbaar na 2 fouten
         this.voegToe(new Cirkel(new Punt(290, 118), 2));//…
         this.voegToe(new Cirkel(new Punt(280, 128), 2));
