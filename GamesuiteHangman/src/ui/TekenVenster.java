@@ -36,6 +36,10 @@ public class TekenVenster extends Canvas {
 
     @Override
     public void paint(Graphics graphics) {
+
+        Graphics2D g = (Graphics2D) graphics;
+        g.setStroke(new BasicStroke(5));
+
         tekening.teken(graphics);
     }
 

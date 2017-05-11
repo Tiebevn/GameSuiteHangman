@@ -14,22 +14,43 @@ public class Launcher {
         String naam = JOptionPane.showInputDialog("Welkom! \nHoe heet je?");
         Speler speler = new Speler(naam);
 
-        JOptionPane.showMessageDialog(null, speler.getNaam() + " zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
+
+        maakKeuze(speler);
 
 
-        String[] keuzes = {"Hangman", "Pictionary"};
-
-        WoordenLijst lijst = new WoordenLijst();
-        lijst.importWords();
 
 
-        HangMan hangMan = new HangMan(speler, lijst);
+    }
 
-        HangManPaneel panel = new HangManPaneel(hangMan);
+    private static void maakKeuze(Speler s) {
+        String[] keuzes = {"Hangman", "Pictionary", "Afsluiten"};
 
-        HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
-        view.setVisible(true);
+        selecteerKeuze(JOptionPane.showInputDialog(null, "Welkom " + s.getNaam() + "\n \n Wat wilt u doen?", "input", JOptionPane.INFORMATION_MESSAGE, null, keuzes, null), s);
 
+
+    }
+
+    private static void selecteerKeuze(Object o, Speler s) {
+
+        if (o.equals("Hangman")) {
+
+            WoordenLijst lijst = new WoordenLijst();
+            lijst.importWords();
+
+
+            HangMan hangMan = new HangMan(s, lijst);
+
+            HangManPaneel panel = new HangManPaneel(hangMan);
+
+            HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
+            view.setVisible(true);
+
+        } else if (o.equals("Pictionary")){
+            JOptionPane.showMessageDialog(null, "Pictionary is nog niet geïmplementeerd");
+            maakKeuze(s);
+        } else {
+            System.exit((0));
+        }
 
     }
 
