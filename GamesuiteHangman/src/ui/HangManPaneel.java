@@ -1,6 +1,7 @@
 package ui;
 
 import domain.HangMan;
+import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,10 +70,7 @@ public class HangManPaneel extends JPanel {
                 }
                 //TODO raad
 
-                if (!spel.raad(guess)) {
-
-                    spel.getGalg().zetVolgendeZichtBaar();
-                }
+                spel.raad(guess);
 
                 woord.setText(getSpel().getHint());
                 letter.setText("");
@@ -81,11 +79,16 @@ public class HangManPaneel extends JPanel {
                 //TODO
                 //toon boodschap als gewonnen of verloren en vraag of speler opnieuw wilt spelen
 
-                if (spel.isGewonnen()) {
-                    // GEWONNEN
-                } else if (spel.isGameOver()) {
-                    // VERLOREN
+                if (spel.isGewonnen() ||spel.isGameOver()) {
+                    int dialogResult = JOptionPane.showConfirmDialog(null, "Wil je nog eens spelen", "Kies", JOptionPane.YES_NO_OPTION);
+                    if (dialogResult == 0) {
+                        
+                    }
+                    if (dialogResult == 1) System.exit((0));
                 }
+
+
+
 
                 //als de speler opnieuw wilt spelen: herzet het spel en het paneel
                 //anders stop (System.exit(0))
