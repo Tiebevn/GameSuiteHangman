@@ -54,6 +54,8 @@ public class HangManPaneel extends JPanel {
                 }
                 //TODO raad
 
+                spel.raad(guess);
+
                 woord.setText(getSpel().getHint());
                 letter.setText("");
                 getTekenVenster().teken();

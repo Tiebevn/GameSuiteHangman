@@ -1,9 +1,8 @@
 package ui;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
-import domain.Speler;
-import domain.Punt;
+import domain.*;
 
 
 public class Launcher {
@@ -15,6 +14,13 @@ public class Launcher {
 
 		JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
 
+
+
+		GameHoofdScherm view = new GameHoofdScherm(speler.getNaam(), new Tekening("Test"));
+		view.setVisible(true);
+		view.teken();
+
+		
 		
 	}
 
