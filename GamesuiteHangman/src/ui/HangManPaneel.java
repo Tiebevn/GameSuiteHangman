@@ -80,6 +80,13 @@ public class HangManPaneel extends JPanel {
 
                 //TODO
                 //toon boodschap als gewonnen of verloren en vraag of speler opnieuw wilt spelen
+
+                if (spel.isGewonnen()) {
+                    // GEWONNEN
+                } else if (spel.isGameOver()) {
+                    // VERLOREN
+                }
+
                 //als de speler opnieuw wilt spelen: herzet het spel en het paneel
                 //anders stop (System.exit(0))
             }
