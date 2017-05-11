@@ -1,9 +1,9 @@
 package ui;
 
-import domain.Speler;
-import domain.Tekening;
+import domain.*;
 
 import javax.swing.*;
+import java.util.List;
 
 
 public class Launcher {
@@ -16,9 +16,19 @@ public class Launcher {
         JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
 
 
-        GameHoofdScherm view = new GameHoofdScherm(speler.getNaam(), new Tekening("Test"));
+        WoordenLijst lijst = new WoordenLijst();
+        lijst.importWords();
+
+
+
+        HangMan hangMan = new HangMan(speler, lijst);
+
+        HangManPaneel panel = new HangManPaneel(hangMan);
+
+        HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
         view.setVisible(true);
-        view.teken();
+
+
 
 
     }
