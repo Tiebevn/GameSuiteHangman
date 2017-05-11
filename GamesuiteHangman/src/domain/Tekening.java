@@ -1,5 +1,6 @@
 package domain;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -24,6 +25,12 @@ public class Tekening {
         return vormen;
     }
 
+
+    public void teken(Graphics g) {
+        for (Vorm v : vormen) {
+            v.teken(g);
+        }
+    }
 
     public void setOnzichtbaar(Vorm v) {
         v.zichtbaar = false;

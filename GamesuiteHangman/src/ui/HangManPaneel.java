@@ -69,7 +69,10 @@ public class HangManPaneel extends JPanel {
                 }
                 //TODO raad
 
-                spel.raad(guess);
+                if (!spel.raad(guess)) {
+
+                    spel.getGalg().zetVolgendeZichtBaar();
+                }
 
                 woord.setText(getSpel().getHint());
                 letter.setText("");

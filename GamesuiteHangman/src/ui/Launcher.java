@@ -1,9 +1,10 @@
 package ui;
 
-import domain.*;
+import domain.HangMan;
+import domain.Speler;
+import domain.WoordenLijst;
 
 import javax.swing.*;
-import java.util.List;
 
 
 public class Launcher {
@@ -13,12 +14,11 @@ public class Launcher {
         String naam = JOptionPane.showInputDialog("Welkom! \nHoe heet je?");
         Speler speler = new Speler(naam);
 
-        JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, speler.getNaam() + " zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
 
 
         WoordenLijst lijst = new WoordenLijst();
         lijst.importWords();
-
 
 
         HangMan hangMan = new HangMan(speler, lijst);
@@ -27,8 +27,6 @@ public class Launcher {
 
         HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
         view.setVisible(true);
-
-
 
 
     }
