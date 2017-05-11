@@ -5,7 +5,9 @@ package domain;
  */
 public class UiException extends RuntimeException {
 
-    public UiException(String message) {
+	private static final long serialVersionUID = 1L;
+
+	public UiException(String message) {
         super(message);
     }
 }

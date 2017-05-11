@@ -7,8 +7,6 @@ public class Speler {
     private String naam;
     private int score;
     private Speler speler;
-    private Speler andereSpeler;
-    private boolean gelijk;
 
     public Speler(String naam) {
         this.score = 0;
