@@ -1,5 +1,6 @@
 package domain;
 
+import domain.shapes.*;
 import org.junit.Before;
 import org.junit.Test;
 

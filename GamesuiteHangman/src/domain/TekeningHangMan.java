@@ -1,5 +1,7 @@
 package domain;
 
+import domain.shapes.*;
+
 /**
  * Created by tiebe on 11/05/2017.
  */

@@ -1,5 +1,7 @@
 package domain;
 
+import domain.exceptions.DomainException;
+
 import java.util.ArrayList;
 
 /**

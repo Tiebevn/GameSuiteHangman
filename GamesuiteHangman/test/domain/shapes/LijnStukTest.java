@@ -1,5 +1,8 @@
-package domain;
+package domain.shapes;
 
+import domain.exceptions.DomainException;
+import domain.shapes.LijnStuk;
+import domain.shapes.Punt;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

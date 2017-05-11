@@ -1,5 +1,8 @@
 package domain;
 
+import db.WoordenLezer;
+import domain.exceptions.DomainException;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

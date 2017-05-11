@@ -1,7 +1,7 @@
 package ui;
 
 import domain.Tekening;
-import domain.UiException;
+import domain.exceptions.UiException;
 
 import java.awt.*;
 

@@ -1,5 +1,8 @@
-package domain;
+package domain.shapes;
 
+import domain.exceptions.DomainException;
+import domain.shapes.Cirkel;
+import domain.shapes.Punt;
 import org.junit.Before;
 import org.junit.Test;
 

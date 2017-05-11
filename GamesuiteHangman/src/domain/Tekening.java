@@ -1,5 +1,7 @@
 package domain;
 
+import domain.shapes.Vorm;
+
 import java.awt.*;
 import java.util.ArrayList;
 

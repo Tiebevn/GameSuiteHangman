@@ -1,5 +1,7 @@
 package domain;
 
+import domain.exceptions.DomainException;
+
 /**
  * Created by Tiebe on 10/05/2017.
  */

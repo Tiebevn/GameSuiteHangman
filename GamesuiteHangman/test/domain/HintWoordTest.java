@@ -1,5 +1,6 @@
 package domain;
 
+import domain.exceptions.DomainException;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
