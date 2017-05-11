@@ -17,18 +17,21 @@ public class Omhullende{
 
     }
 
-    public int getMinX() {
+    public int getMIN_X() {
         return this.getLinkerBovenhoek().getX();
     }
-    public int getMinY() {
+    public int getMIN_Y() {
         return this.getLinkerBovenhoek().getY() ;
     }
-    public int getMaxX() {
+    public int getMAX_X() {
         return this.getLinkerBovenhoek().getX() + this.getBreedte();
     }
-    public int getMaxY() {
+    public int getMAX_Y() {
         return this.getLinkerBovenhoek().getY() + this.getHoogte();
     }
+
+
+
 
     public Punt getLinkerBovenhoek() {
         return linkerBovenhoek;

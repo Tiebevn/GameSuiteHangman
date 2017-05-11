@@ -1,8 +1,7 @@
 package domain;
 
-import domain.DomainException;
-
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,32 +9,36 @@ import java.util.List;
  */
 public class WoordenLijst {
 
-    private static List<String> lijst;
+    private ArrayList<String> lijst;
 
 
+    public WoordenLijst() {
+        this.lijst = new ArrayList<>();
+    }
 
-    public static void importWords() {
+
+    public void importWords() {
         try {
-            lijst =WoordenLezer.lees();
+            lijst = WoordenLezer.lees();
         } catch (IOException e) {
 
         }
     }
 
     public int getAantalWoorden() {
-        return 1;
+        return this.lijst.size();
     }
 
-    public  List<String> get() {
+    public List<String> get() {
         return lijst;
     }
 
-    public  void voegToe(String woord) {
-        if (woord == null || woord.isEmpty()) throw new DomainException("");
+    public void voegToe(String woord) {
+        if (woord == null || woord.isEmpty() || this.lijst.contains(woord)) throw new DomainException("");
         lijst.add(woord);
     }
 
-    public  String getRandom() {
+    public String getRandom() {
 
         return lijst.get((int) (Math.random() * lijst.size()));
     }

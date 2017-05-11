@@ -7,55 +7,60 @@ import java.util.ArrayList;
  */
 public class HintWoord {
 
-    private ArrayList<HintLetter> hintLetters;
+    private String woord;
+    private ArrayList<HintLetter> hint;
 
     public HintWoord(String woord) {
-        hintLetters = new ArrayList<>();
-        this.create(woord);
+        this.setWoord(woord);
+        this.createHint(woord);
+
     }
 
-    private void create(String woord) {
-        if (woord ==null |woord.isEmpty()) throw new DomainException("");
-        char[] chars = woord.toCharArray();
+    private void createHint(String woord) {
+        if (woord == null || woord.isEmpty()) throw new DomainException("");
 
-        for (char c : chars) {
-            hintLetters.add(new HintLetter(c));
+        this.hint = new ArrayList<>();
+
+        for (char c: woord.toCharArray()) {
+            this.hint.add(new HintLetter(c));
         }
     }
 
     public boolean raad(char c) {
+
         boolean flag = false;
-        for (HintLetter h : hintLetters) {
-            h.raad(c);
+
+        for (HintLetter h : hint) {
             if (h.raad(c)) flag = true;
         }
 
         return flag;
+
     }
 
     public boolean isGeraden() {
-
-
-        for (HintLetter h : hintLetters) {
-            if (!(h.isGeraden())) return false;
+        for (HintLetter h : hint) {
+            if (!h.isGeraden()) return false;
         }
         return true;
     }
 
     public String getWoord() {
+        return woord;
+    }
+
+    public void setWoord(String woord) {
+        if (woord == null || woord.isEmpty()) throw new DomainException("");
+        this.woord = woord;
+    }
+
+    @Override
+    public String toString() {
         String result = "";
 
-        for (HintLetter h : hintLetters) {
-            result = result + " " + h.getLetter() + " ";
+        for (HintLetter h : hint) {
+            result += " " + h.toChar();
         }
-
-        return result;
+        return result.trim();
     }
-
-    public String toString() {
-        return this.getWoord();
-    }
-
-
-
 }

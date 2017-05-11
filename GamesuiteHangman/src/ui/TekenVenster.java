@@ -12,6 +12,7 @@ import domain.LijnStuk;
 import domain.Punt;
 import domain.Rechthoek;
 import domain.Tekening;
+import domain.UiException;
 
 public class TekenVenster extends Canvas {
 
@@ -44,8 +45,8 @@ public class TekenVenster extends Canvas {
         Driehoek dak = new Driehoek(new Punt(100, 200), new Punt(300, 200),
                 new Punt(200, 100));
 
-        graphics.drawOval(boomkruin.getOmhullende().getMinX(), boomkruin
-                .getOmhullende().getMinY(), boomkruin.getOmhullende()
+        graphics.drawOval(boomkruin.getOmhullende().getMIN_X(), boomkruin
+                .getOmhullende().getMIN_X(), boomkruin.getOmhullende()
                 .getBreedte(), boomkruin.getOmhullende().getHoogte());
 
         graphics.drawRect(gebouw.getLinkerBovenhoek().getX(), gebouw
@@ -56,10 +57,10 @@ public class TekenVenster extends Canvas {
                 .getStartPunt().getY(), boomstam.getEindPunt().getX(), boomstam
                 .getEindPunt().getY());
 
-        int[] xPoints = { dak.getHoekPunt1().getX(), dak.getHoekPunt2().getX(),
-                dak.getHoekPunt3().getX() };
-        int[] yPoints = { dak.getHoekPunt1().getY(), dak.getHoekPunt2().getY(),
-                dak.getHoekPunt3().getY() };
+        int[] xPoints = { dak.getHoekpunt1().getX(), dak.getHoekpunt2().getX(),
+                dak.getHoekpunt3().getX() };
+        int[] yPoints = { dak.getHoekpunt1().getY(), dak.getHoekpunt2().getY(),
+                dak.getHoekpunt3().getY() };
         graphics.drawPolygon(xPoints, yPoints, 3);
     }
 }

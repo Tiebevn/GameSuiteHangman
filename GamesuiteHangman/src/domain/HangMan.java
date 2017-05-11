@@ -8,24 +8,47 @@ public class HangMan {
 
     private Speler speler;
     private WoordenLijst lijst;
+    private HintWoord woord;
+    private TekeningHangMan galg;
 
-    private boolean gewonnen, gameOver;
+    private boolean gewonnen = false, gameOver = false;
 
     public HangMan(Speler speler, WoordenLijst lijst) {
         this.setSpeler(speler);
         this.setLijst(lijst);
+        this.pickWord();
+        this.galg = new TekeningHangMan();
+
+    }
+
+    private void pickWord() {
+        woord = new HintWoord(lijst.getRandom());
     }
 
     public Tekening getTekening() {
-        return new Tekening("Test");
+        return this.galg.getTekening();
     }
 
     public String getHint() {
-        return "";
+        return this.woord.toString();
     }
 
     public boolean raad(char c) {
-        return false;
+
+        if (!woord.raad(c)) {
+            if (galg.zetVolgendeZichtBaar()) {
+
+                if (galg.getTekening().getAantalOnzichtbaar() == 0) {
+                    this.gameOver = true;
+                }
+
+                return false;
+            }
+
+            }
+        if (this.woord.isGeraden()) this.gewonnen = true;
+
+        return true;
     }
 
     public boolean isGewonnen() {
@@ -58,6 +81,9 @@ public class HangMan {
     }
 
     public void setLijst(WoordenLijst lijst) {
+
+        if (lijst == null || lijst.getAantalWoorden() == 0) throw new DomainException("");
+
         this.lijst = lijst;
     }
 }

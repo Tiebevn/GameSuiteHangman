@@ -2,11 +2,9 @@ package domain;
 
 
 import java.io.IOException;
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import java.util.List;
+import java.util.ArrayList;
 
 
 /**
@@ -15,12 +13,14 @@ import java.util.List;
 public class WoordenLezer {
 
 
+    public static ArrayList<String> lees() throws IOException {
 
-    public static List<String> lees() throws IOException {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.addAll(Files.readAllLines(Paths.get("wordlist.txt")));
 
 
-        return Files.readAllLines(Paths.get("wordlist.txt"));
-
+        return list;
 
 
     }

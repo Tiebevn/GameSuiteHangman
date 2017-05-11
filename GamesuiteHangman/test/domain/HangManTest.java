@@ -86,8 +86,8 @@ public class HangManTest {
 		hangmanOp1NaGeraden.raad('s');
 
 		assertEquals(14, hangmanOp1NaGeraden.getTekening().getAantalOnzichtbaar());
-		assertFalse(hangmanOp1NaGeraden.isGameOver());
-		assertTrue(hangmanOp1NaGeraden.isGewonnen());
+		assertEquals(false,hangmanOp1NaGeraden.isGameOver());
+		assertEquals(true,hangmanOp1NaGeraden.isGewonnen());
 	}
 	
 	@Test
@@ -100,8 +100,8 @@ public class HangManTest {
 		hangmanNietGeradenEn13FouteAntwoorden.raad('o');
 		
 		assertEquals(0, hangmanNietGeradenEn13FouteAntwoorden.getTekening().getAantalOnzichtbaar());
-		assertTrue(hangmanNietGeradenEn13FouteAntwoorden.isGameOver());
-		assertFalse(hangmanNietGeradenEn13FouteAntwoorden.isGewonnen());
+		assertEquals(true, hangmanNietGeradenEn13FouteAntwoorden.isGameOver());
+		assertEquals(false, hangmanNietGeradenEn13FouteAntwoorden.isGewonnen());
 	}
 
 }

@@ -14,7 +14,12 @@ public class HintLetter {
     }
 
     public boolean raad(char c) {
-        if (c == this.letter) {
+
+
+        if (c == this.letter ||Character.toUpperCase(c) == this.letter || Character.toLowerCase(c) == this.letter) {
+
+            if (this.isGeraden()) return false;
+
             this.geraden = true;
             return true;
         } else {
@@ -26,11 +31,13 @@ public class HintLetter {
         return this.geraden;
     }
     public char getLetter() {
-        if (isGeraden()) return this.letter;
-        return '_';
+        return this.letter;
     }
 
     public char toChar() {
-        return this.letter;
+
+
+        if (isGeraden()) return this.letter;
+        return '_';
     }
 }
