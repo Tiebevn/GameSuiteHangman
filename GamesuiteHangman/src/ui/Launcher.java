@@ -13,7 +13,7 @@ public class Launcher {
         String naam = JOptionPane.showInputDialog("Welkom! \nHoe heet je?");
         Speler speler = new Speler(naam);
 
-        JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, speler.getNaam() + " zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
 
 
         WoordenLijst lijst = new WoordenLijst();
