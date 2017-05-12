@@ -17,10 +17,10 @@ public class Launcher {
         try {
             Speler speler = new Speler(naam);
             maakKeuze(speler);
-        } catch (DomainException e) {JOptionPane.showMessageDialog(null, e.getMessage());
-        main(null);}
-
-
+        } catch (DomainException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            main(null);
+        }
 
 
     }
@@ -35,31 +35,29 @@ public class Launcher {
 
     private static void selecteerKeuze(Object o, Speler s) {
         try {
-        if (o.equals("Hangman")) {
+            if (o.equals("Hangman")) {
 
 
+                WoordenLijst lijst = new WoordenLijst();
+                lijst.importWords();
 
 
-            WoordenLijst lijst = new WoordenLijst();
-            lijst.importWords();
+                HangMan hangMan = new HangMan(s, lijst);
 
+                HangManPaneel panel = new HangManPaneel(hangMan);
 
+                HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
+                view.setVisible(true);
 
-
-            HangMan hangMan = new HangMan(s, lijst);
-
-            HangManPaneel panel = new HangManPaneel(hangMan);
-
-            HangManHoofdScherm view = new HangManHoofdScherm(hangMan, panel);
-            view.setVisible(true);
-
-        } else if (o.equals("Pictionary")) {
-            JOptionPane.showMessageDialog(null, "Pictionary is nog niet geïmplementeerd");
-            maakKeuze(s);
-        } else {
-            System.exit((0));
+            } else if (o.equals("Pictionary")) {
+                JOptionPane.showMessageDialog(null, "Pictionary is nog niet geïmplementeerd");
+                maakKeuze(s);
+            } else {
+                System.exit((0));
+            }
+        } catch (DomainException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
-        } catch (DomainException e) {JOptionPane.showMessageDialog(null, e.getMessage());}
     }
 
 }

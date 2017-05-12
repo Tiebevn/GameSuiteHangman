@@ -1,6 +1,5 @@
 package domain.shapes;
 
-import domain.shapes.Punt;
 import org.junit.Before;
 import org.junit.Test;
 

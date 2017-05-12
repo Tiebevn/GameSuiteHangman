@@ -68,7 +68,7 @@ public class HangManPaneel extends JPanel {
                 if (input.length() > 0) {
                     guess = input.charAt(0);
                 }
-                //TODO raad
+
 
                 spel.raad(guess);
 
@@ -76,7 +76,7 @@ public class HangManPaneel extends JPanel {
                 letter.setText("");
                 getTekenVenster().teken();
 
-                //TODO
+
                 //toon boodschap als gewonnen of verloren en vraag of speler opnieuw wilt spelen
 
                 if (spel.isGewonnen() || spel.isGameOver()) {

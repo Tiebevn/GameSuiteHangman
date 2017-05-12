@@ -1,8 +1,6 @@
 package domain.shapes;
 
 import domain.exceptions.DomainException;
-import domain.shapes.Omhullende;
-import domain.shapes.Punt;
 import org.junit.Before;
 import org.junit.Test;
 
