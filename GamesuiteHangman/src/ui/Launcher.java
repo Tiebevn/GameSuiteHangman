@@ -3,6 +3,7 @@ package ui;
 import domain.HangMan;
 import domain.Speler;
 import domain.WoordenLijst;
+import domain.exceptions.DomainException;
 
 import javax.swing.*;
 
@@ -12,10 +13,14 @@ public class Launcher {
     public static void main(String[] args) {
 
         String naam = JOptionPane.showInputDialog("Welkom! \nHoe heet je?");
-        Speler speler = new Speler(naam);
+
+        try {
+            Speler speler = new Speler(naam);
+            maakKeuze(speler);
+        } catch (DomainException e) {JOptionPane.showMessageDialog(null, e.getMessage());
+        main(null);}
 
 
-        maakKeuze(speler);
 
 
     }
@@ -29,11 +34,16 @@ public class Launcher {
     }
 
     private static void selecteerKeuze(Object o, Speler s) {
-
+        try {
         if (o.equals("Hangman")) {
+
+
+
 
             WoordenLijst lijst = new WoordenLijst();
             lijst.importWords();
+
+
 
 
             HangMan hangMan = new HangMan(s, lijst);
@@ -49,7 +59,7 @@ public class Launcher {
         } else {
             System.exit((0));
         }
-
+        } catch (DomainException e) {JOptionPane.showMessageDialog(null, e.getMessage());}
     }
 
 }
